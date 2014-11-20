@@ -17,5 +17,6 @@ This will run a all story that config on pom.xml
 
     mvn clean install
 
+
 ## Viewing the results
-	Open $PROJECT_PATH/target/jbehave/XXXX.html on any browser.
+    Open $PROJECT_PATH/target/jbehave/XXXX.html on any browser.

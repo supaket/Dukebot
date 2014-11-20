@@ -1,12 +1,11 @@
 package com.thjug.duke.step;
 
-import com.thjug.duke.page.AgodaHome;
+import com.thjug.duke.page.Agoda;
 import java.util.Arrays;
 import java.util.List;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
-import org.jbehave.web.selenium.WebDriverProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -18,10 +17,10 @@ import org.testng.Assert;
  */
 public class SearchStep {
 
-	private final AgodaHome page;
+	private final Agoda page;
    
-	public SearchStep(final WebDriverProvider provider) {
-		page = new AgodaHome(provider);
+	public SearchStep(final Agoda page) {
+		this.page = page;
 	}
 
 	@Given("user go $pageurl")

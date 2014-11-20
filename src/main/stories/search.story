@@ -1,4 +1,4 @@
-Scenario: Should has Jiande Peninsula Kaihao Hotel at Hangzhou city.
+Scenario: Should has Banyan Tree Hangzhou at Hangzhou city on Feb 01, 2015
 
 Given user go http://www.agoda.com
 

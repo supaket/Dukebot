@@ -6,9 +6,9 @@ import org.jbehave.web.selenium.WebDriverProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class AgodaHome extends Page {
+public class Agoda extends Page {
 
-	public AgodaHome(final WebDriverProvider driverProvider) {
+	public Agoda(final WebDriverProvider driverProvider) {
 		super(driverProvider);
 	}
     
