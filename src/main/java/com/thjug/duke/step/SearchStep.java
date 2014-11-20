@@ -68,7 +68,7 @@ public class SearchStep {
 		page.findElement(By.className(classid)).click();
 	}
 
-	@When("wait for $sec sec")
+	@When("หยุดรอ $sec วินาที")
 	public void waitForSeconds(final int sec) throws InterruptedException {
 		Thread.sleep(1000 * sec);
 	}

@@ -3,6 +3,7 @@ Scenario: Should has Banyan Tree Hangzhou at Hangzhou city on Feb 01, 2015
 Given user go http://www.agoda.com
 
 When user enter <city> into SearchInput
+And หยุดรอ 10 วินาที
 And user select text <checkin_month> at CheckInMonthYear dropdown
 And user select text <checkin_day> at CheckInDay dropdown
 And user select text <night> at NightCount dropdown
