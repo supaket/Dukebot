@@ -3,6 +3,7 @@ package com.thjug.duke.step;
 import com.thjug.duke.page.Agoda;
 import java.util.Arrays;
 import java.util.List;
+import org.jbehave.core.annotations.Aliases;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -23,12 +24,17 @@ public class SearchStep {
 		this.page = page;
 	}
 
-	@Given("user go $pageurl")
+	@Given("page go $pageurl")
+    @Aliases(values={
+        "user go $pageurl",
+        "ผู้ใช้ไปที่ $pageurl"})
 	public void access(final String pageurl) {
 		page.go(pageurl);
 	}
 
 	@When("user enter $value into $elementid")
+    @Aliases(values={
+        "ผู้ใช้พิมพ์ $value ที่ช่อง $elementid"})
 	public void enterText(final String value, final String elementid) {
         final WebElement element = page.findElement(By.id(elementid));
         element.clear();
@@ -36,6 +42,8 @@ public class SearchStep {
 	}
     
     @When("user select text $value at $elementid dropdown")
+    @Aliases(values={
+        "ผู้ใช้เลือกข้อความ $value ที่ $elementid ตัวเลือก"})
     public void selectText(final String value, final String elementid) {
         final Select select = new Select(page.findElement(By.id(elementid)));
         select.selectByVisibleText(value);
@@ -48,11 +56,15 @@ public class SearchStep {
 	} 
 
 	@When("user click id $elementid")
+    @Aliases(values={
+        "ผู้ใช้กดปุ่มไอดี $elementid"})
 	public void clickById(final String elementid) {
 		page.findElement(By.id(elementid)).click();
 	}
     
     @When("user click class $classname")
+    @Aliases(values={
+        "ผู้ใช้กดปุ่มคลาส $elementid"})
 	public void clickByClass(final String classname) {
 		page.findElement(By.className(classname)).click();
 	}
@@ -68,9 +80,12 @@ public class SearchStep {
 		page.findElement(By.className(classid)).click();
 	}
 
-	@When("หยุดรอ $sec วินาที")
+	@When("thread sleep $sec second")
+    @Aliases(values={
+        "wait for $sec วินาที",
+        "หยุดรอ $sec วินาที"})
 	public void waitForSeconds(final int sec) throws InterruptedException {
-		Thread.sleep(1000 * sec);
+		Thread.sleep(sec * 1000);
 	}
 
 	@Then("system display page as $pagename")
@@ -80,6 +95,8 @@ public class SearchStep {
 	}
     
     @Then("system display hotel as $hotelname")
+    @Aliases(values={
+        "ระบบโชว์หน้าจอ $pagename"})
 	public void displayHotel(final String hotelname) {
 		final String url = page.getCurrentUrl();
 		Assert.assertTrue(url.contains(hotelname));
@@ -91,6 +108,8 @@ public class SearchStep {
 	}
     
     @Then("there is hotel $hotel in hotelInfoPlaceholder")
+    @Aliases(values={
+        "ระบบโชว์โรงแรม $hotel"})
     public void hotelExisit(final String hotel) {
         final WebElement a = page.findHotelLink(hotel);
         

@@ -1,19 +1,15 @@
 Scenario: Should has Banyan Tree Hangzhou at Hangzhou city on Feb 01, 2015
 
-Given user go http://www.agoda.com
+Given ผู้ใช้ไปที่ http://www.agoda.com
 
-When user enter <city> into SearchInput
+When ผู้ใช้พิมพ์ <city> ที่ช่อง SearchInput
+And ผู้ใช้เลือกข้อความ <checkin_month> ที่ CheckInMonthYear ตัวเลือก
+And ผู้ใช้เลือกข้อความ <checkin_day> ที่ CheckInDay ตัวเลือก
+And ผู้ใช้เลือกข้อความ <night> ที่ NightCount ตัวเลือก
+And ผู้ใช้กดปุ่มคลาส submit
+Then ระบบโชว์หน้าจอ /pages/agoda/default/DestinationSearchResult.aspx
+And ระบบโชว์โรงแรม <hotelname>
 And หยุดรอ 10 วินาที
-And user select text <checkin_month> at CheckInMonthYear dropdown
-And user select text <checkin_day> at CheckInDay dropdown
-And user select text <night> at NightCount dropdown
-And user click class submit
-Then system display page as /pages/agoda/default/DestinationSearchResult.aspx
-And there is hotel <hotelname> in hotelInfoPlaceholder
-
-When user clickhotel <hotelname>
-And user select currency Thai Baht (THB) on class sl_choosesearch
-And user clicklink class show_moreroom
 
 Examples: 
 |city|hotelname|checkin_month|checkin_day|night|

@@ -35,9 +35,9 @@ public class Agoda extends Page {
         final List<WebElement> element = findElements(By.className("sgrayu"));
         
         final List<String> prices = new LinkedList<>();
-        element.stream().forEach((e) -> {
-            prices.add(e.findElement(By.className("purple")).getText());
-        });
+//        element.stream().forEach((e) -> {
+//            prices.add(e.findElement(By.className("purple")).getText());
+//        });
 
         return prices;
     }
