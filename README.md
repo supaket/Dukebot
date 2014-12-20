@@ -1,9 +1,6 @@
 
 This tutorial uses JBehave 3.x and Selenium 2.x to test [bgileboard.com](http://bgileboard.com).
 
-
-<img src="" alt="Bgile" align="right" />
-
 ## Requirement
  1. Eclipse or Netbeans.
  -  Java SE 1.8 latest version.
