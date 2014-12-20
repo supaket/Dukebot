@@ -1,4 +1,6 @@
-[![Build Status](http://localhost:8080/job/dukanium/badge/icon)](http://localhost:8080/job/dukanium/)
+```html
+http://localhost:8080/job/dukanium/badge/icon
+```
 
 This tutorial uses JBehave 3.x and Selenium 2.x to test [bgileboard.com](http://bgileboard.com).
 
