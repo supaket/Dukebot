@@ -1,6 +1,7 @@
 ```html
 http://localhost:8080/job/dukanium/badge/icon
 ```
+<a href='http://localhost:8080/job/dukanium/'><img src='http://localhost:8080/job/dukanium/badge/icon'></a>
 
 This tutorial uses JBehave 3.x and Selenium 2.x to test [bgileboard.com](http://bgileboard.com).
 
